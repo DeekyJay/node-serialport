@@ -96,7 +96,7 @@
     "docs:diff": "jsdoc2md --no-cache -t .docs/README.hbs --partial .docs/sig-name.hbs --partial .docs/sig-link.hbs --partial .docs/edit-warning.hbs -r table --separators --name-format -f lib/* lib/bindings/* lib/parsers/* | diff -q README.md - || (echo 'Docs out of date, run `npm run docs` and commit the new README.md' && false)",
     "install": "node-pre-gyp install --fallback-to-build && npm run electron-rebuild",
     "lint": "eslint lib test bin examples",
-    "rebuild-all": "npm rebuild && node-gyp rebuild && npm run electron-rebuild",
+    "rebuild-all": "npm rebuild && node-gyp rebuild",
     "stress": "mocha --no-timeouts test/arduinoTest/stress.js",
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "test:watch": "mocha -w",
